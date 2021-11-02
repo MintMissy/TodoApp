@@ -1,0 +1,33 @@
+.c-edited-card__header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-base-1);
+}
+
+.c-edited-card__input-icon {
+    color: var(--color-base-7);
+}
+
+.c-edited-card__input-title {
+    margin: 0 var(--space-m);
+    padding: var(--space-xxs);
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    box-shadow: 0 0 20px #00000017;
+    color: var(--color-base-7);
+    background-color: var(--color-base-2);
+}
+
+.c-edited-card__input-title::placeholder {
+    color: var(--color-base-6);
+}
+
+.c-edited-card__header__icons {
+    margin-left: auto;
+    display: flex;
+    gap: var(--space-xxs);
+}
+
+.c-edited-card__header__icon {
+    color: var(--color-base-7);
+}

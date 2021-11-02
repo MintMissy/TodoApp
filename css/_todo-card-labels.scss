@@ -1,0 +1,23 @@
+.c-todo-card__labels {
+    display: flex;
+    align-items: center;
+}
+
+.c-card-label {
+    flex-grow: 1;
+    height: 0.35em;
+    background-color: var(--color-primary-base);
+    margin-bottom: var(--space-s);
+}
+
+$labels-edges-radius: var(--space-xxs);
+
+.c-card-label:first-child {
+    border-top-left-radius: $labels-edges-radius;
+    border-bottom-left-radius: $labels-edges-radius;
+}
+
+.c-card-label:last-child {
+    border-top-right-radius: $labels-edges-radius;
+    border-bottom-right-radius: $labels-edges-radius;
+}

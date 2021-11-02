@@ -1,0 +1,74 @@
+.c-todo-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: var(--space-xs);
+}
+
+$info-icons-size: 1.5rem;
+$info-icons-size-small: 1.3rem;
+
+.c-card-info-icons {
+    display: flex;
+    align-items: center;
+}
+
+.c-card-info-icons__icon {
+    font-size: $info-icons-size;
+    margin-top: var(--space-xxs);
+}
+
+.c-card-todo-progress,
+.c-card-todo-schedule {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3em;
+    gap: var(--space-xxs);
+}
+
+.c-card-todo-progress--complete,
+.c-card-todo-schedule--complete {
+    color: white;
+    padding-left: var(--space-xxs);
+    padding-right: var(--space-xs);
+    margin-left: var(--space-xxs);
+    margin-right: var(--space-xxs);
+    background-color: var(--color-primary-light);
+    border-radius: var(--space-xxs);
+}
+
+.schedule-much-time-left {
+    background-color: transparent;
+}
+
+.schedule-little-time-left {
+    background-color: var(--color-alert);
+}
+
+.schedule-no-time-left {
+    background-color: var(--color-error);
+}
+
+.c-card-todo-progress__icon,
+.c-card-todo-schedule__icon {
+    font-size: $info-icons-size-small;
+    padding: 0.05em 0;
+}
+
+.c-card-todo-progress__progress,
+.c-card-todo-schedule__date {
+    font-size: .9rem;
+}
+
+.c-card-members {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.c-card-members__icon {
+    border-radius: 50%;
+    background-color: var(--color-base-2);
+    height: 1.5em;
+    width: 1.5em;
+}

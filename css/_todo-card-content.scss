@@ -1,0 +1,30 @@
+.c-edited-card__content {
+    padding: 0 var(--space-s) var(--space-s) var(--space-s);
+}
+
+.c-todo-card__content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.c-card-content__icon {
+    color: var(--color-base-7);
+}
+
+.edited-card__pickable-menu {
+    margin-top: var(--space-xs);
+    padding: 0 var(--space-m);
+}
+
+.c-card-content__title,
+.c-card-content__title-input {
+    font-size: var(--font-size-m);
+    font-weight: 400;
+}
+
+.c-card-content__title-input,
+.c-card-content__title-input:focus {
+    outline: none;
+    border: none
+}

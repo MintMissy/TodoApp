@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaDaToDo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="scripts/script.js"></script>
+</head>
+
+<!-- Extract titles, subtitles color, icons margin to one class -->
+
+<body>
+  <main>
+    <div class="l-edited-card">
+      <div class="darken-background"></div>
+      <div class="c-edited-card">
+        <div class="c-edited-card__header">
+          <span id="c-edited-card__input-icon" class="c-edited-card__input-icon material-icons action-icon"
+            title="Pick card icon">add</span>
+          <textarea id="c-edited-card__input-title"
+            class="c-edited-card__input-title input input--text input--text-dark" placeholder="Card Title" rows="1"
+            cols="100"></textarea>
+          <div class="c-edited-card__header__icons">
+            <span id="c-edited-card__remove-card" class="c-edited-card__header__icon action-icon material-icons"
+              title="Remove card">delete_outline</span>
+            <span id="c-edited-card__close-card" class="c-edited-card__header__icon action-icon material-icons"
+              title="Close card">close</span>
+          </div>
+        </div>
+        <div id="c-icons-dropdown" class="c-icons-dropdown">
+          <h1 class="c-icons-dropdown__pick-icon">
+            <span class="material-icons c-icons-dropdown__pick-icon__icon">visibility</span>
+            Pick icon:
+          </h1>
+          <div id="c-icons-to-pick" class="c-icons-dropdown__icons-to-pick">
+            <span class="c-icons-dropdown__icon action-icon material-icons">close</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">info</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">shopping_cart</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">description</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">language</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">date_range</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">paid</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">report_problem</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">savings</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">build</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">work</span>
+            <span class="c-icons-dropdown__icon action-icon material-icons">code</span>
+          </div>
+        </div>
+        <div class="c-edited-card__navbar">
+          <div class="c-edited-card__navbar__item c-edited-card__navbar__item--active">
+            <span class="c-edited-card__navbar__item__icon material-icons">bookmark</span>
+            Labels
+          </div>
+          <div class="c-edited-card__navbar__item">
+            <span class="c-edited-card__navbar__item__icon material-icons">event</span>
+            Schedule
+          </div>
+          <div class="c-edited-card__navbar__item">
+            <span class="c-edited-card__navbar__item__icon material-icons">account_circle</span>
+            Members
+          </div>
+          <div class="c-edited-card__navbar__item">
+            <span class="c-edited-card__navbar__item__icon material-icons">link</span>
+            Attachments
+          </div>
+        </div>
+        <div id="edited-card__pickable-menus" class="edited-card__pickable-menus">
+          <div class="edited-card__pickable-menu__labels edited-card__pickable-menu">
+            <div class="c-edited-card__c-labels">
+              <div class="editable-card-label editable-card-label--red"></div>
+              <div class="action-icon">
+                <span class="material-icons">add</span>
+              </div>
+            </div>
+          </div>
+          <div class="edited-card__pickable-menu__schedule edited-card__pickable-menu">
+            <div>Schedule</div>
+            <input type="date" name="" id="">
+            <input type="time" name="" id="">
+          </div>
+          <div class="edited-card__pickable-menu__members edited-card__pickable-menu">
+            <div>Members</div>
+          </div>
+          <div class="edited-card__pickable-menu__attachments edited-card__pickable-menu">
+            <div>Attachments</div>
+          </div>
+        </div>
+        <div class="c-edited-card__content">
+          <label for="card-description" class="card-description-label label-for-input">
+            <span class="material-icons title-icon">subject</span>
+            Description
+          </label>
+          <textarea id="c-edited-card__input-description" class="c_edited-card__input-description input--text"
+            cols="100" rows="10" name="card-description" placeholder="Write here card description"></textarea>
+          <label class="todo-list-label label-for-input">
+            <span class="material-icons title-icon">checklist_rtl</span>
+            Tasks List
+            (<span id="todo-progress">2/3</span>)
+          </label>
+          <ul class="c-edited-card__tasks-list-container">
+            <li class="c-task">
+              <input type="checkbox" class="c-task__checkbox"></input>
+              <input class="c-task__description input" value="Go shopping"></input>
+              <div class="c-task__actions">
+                <span class="action-icon material-icons" title="Set task deadline">schedule</span>
+                <span class="action-icon material-icons" title="Remove task">delete_outline</span>
+              </div>
+            </li>
+            <li class="c-task-add action-icon input">
+              <span class="c-task-add__icon material-icons">add</span>
+              Add task
+            </li>
+          </ul>
+        </div>
+        <div class="c-edited-card__footer">
+          <div id="cancel-card-editing" class="c-edited-card-cancel button button--long" title="Cancel changes">
+            Cancel
+          </div>
+          <div id="save-card-changes" class="c-edited-card-save button button--long button--secondary"
+            title="Save changes">
+            Save
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="todos-container">
+      <div class="todo-list">
+        <input class="todo-list__title" placeholder="Todo Title" value="Business Card"></input>
+        <div class="c-todo-card todo-card-box">
+          <div class="c-todo-card__labels">
+            <div class="c-card-label"></div>
+            <div class="c-card-label"></div>
+            <div class="c-card-label"></div>
+          </div>
+          <div class="c-todo-card__content">
+            <span class="material-icons c-card-content__icon">work</span>
+            <h1 class="c-card-content__title">EG Title</h1>
+          </div>
+          <div class="c-todo-card__footer">
+            <div class="c-card-info-icons">
+              <span class="c-card-info-icons__icon material-icons">subject</span>
+              <div class="c-card-todo-progress c-card-todo-progress--complete">
+                <span class="c-card-todo-progress__icon material-icons">done</span>
+                <span class="c-card-todo-progress__progress">5/5</span>
+              </div>
+              <div class="c-card-todo-schedule c-card-todo-schedule--complete schedule-little-time-left ">
+                <span class="c-card-todo-schedule__icon material-icons">schedule</span>
+                <span class="c-card-todo-schedule__date">14 Jul</span>
+              </div>
+            </div>
+            <div class="c-card-members">
+              <div class="c-card-members__icon"></div>
+              <div class="c-card-members__icon"></div>
+            </div>
+          </div>
+        </div>
+        <div class="add-card button button--big">
+          <span class="inline-icon  material-icons">add</span>
+          Add Card
+        </div>
+      </div>
+      <div id="add-todo" class="todo-list add-todo">
+        <div class="container button">
+          <span class="inline-icon material-icons">add</span>
+          Add Todo
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

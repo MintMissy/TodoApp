@@ -1,0 +1,66 @@
+// Buttons
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--space-xxs);
+    background-color: var(--color-base-1);
+    padding: var(--space-xs);
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--color-base-5);
+    font-size: var(--font-size-m);
+}
+
+.button--big {
+    padding: var(--space-xs) var(--space-xs);
+}
+
+.button--small {
+    font-size: var(--font-size-s);
+}
+
+.button--long {
+    font-size: var(--space-m);
+    padding: var(--space-xs) 3em;
+}
+
+.button:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-base-8);
+}
+
+.button:active {
+    background-color: var(--color-primary-base);
+}
+
+.button--secondary {
+    background-color: var(--color-secondary-light);
+    color: var(--color-base-8);
+}
+
+.button--secondary:hover {
+    background-color: var(--color-secondary-base);
+}
+
+.button--secondary:active {
+    background-color: var(--color-secondary-dark);
+}
+
+// Action icons behavior
+.action-icon {
+    color: var(--color-base-7);
+    cursor: pointer;
+}
+
+.action-icon:hover {
+    color: var(--color-base-9);
+}
+
+.action-icon::selection {
+    background-color: transparent;
+}
+
+.inline-icon {
+    margin-right: var(--space-xxs);
+}

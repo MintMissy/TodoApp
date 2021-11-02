@@ -1,0 +1,51 @@
+.c-icons-dropdown {
+    display: none;
+    margin-top: var(--space-xxs);
+    background-color: var(--color-base-1);
+    padding: var(--space-s);
+    border-radius: var(--space-xxs);
+    color: var(--color-base-7);
+}
+
+.c-icons-dropdown__pick-icon__icon {
+    margin-right: var(--space-xs);
+}
+
+.c-icons-dropdown__pick-icon {
+    font-size: var(--font-size-s);
+    display: flex;
+    align-items: center;
+}
+
+.c-icons-dropdown__pick-icon {
+    font-size: var(--font-size-s);
+    display: flex;
+    align-items: center;
+}
+
+.c-icons-dropdown__icons-to-pick {
+    max-height: 30vh;
+    overflow-y: auto;
+    $icon-size: 3em;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(auto-fill, minmax($icon-size, 1fr));
+    margin-top: var(--space-xs);
+    gap: var(--space-s);
+}
+
+.c-icons-dropdown__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-base-6);
+    padding: var(--space-s);
+    background-color: var(--color-base-2);
+    border-radius: var(--space-xxs);
+}
+
+@media screen and (min-width: 679px) {
+    .c-icons-dropdown__icon {
+        padding: var(--space-xs);
+    }
+}

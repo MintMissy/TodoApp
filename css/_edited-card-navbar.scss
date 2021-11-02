@@ -1,0 +1,32 @@
+.c-edited-card__navbar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--space-xs) var(--space-s) 0 var(--space-s);
+    gap: var(--space-xs);
+    margin-bottom: var(--space-s);
+}
+
+.c-edited-card__navbar__item {
+    display: flex;
+    align-items: center;
+    border-radius: var(--space-xs);
+    background-color: var(--color-base-1);
+    padding: var(--space-xxs) var(--space-xs);
+    font-size: var(--font-size-s);
+    color: var(--color-base-7);
+    cursor: pointer;
+    gap: var(--space-xxs);
+}
+
+.c-edited-card__navbar__item:hover,
+.c-edited-card__navbar__item--active {
+    outline: 2px solid var(--color-base-3);
+}
+
+.c-edited-card__navbar__item__icon {
+    font-size: var(--font-size-m);
+}
+
+.edited-card__pickable-menu {
+    display: none;
+}

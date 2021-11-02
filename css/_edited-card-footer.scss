@@ -1,0 +1,20 @@
+.c-edited-card__footer {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-m);
+}
+
+.c-edited-card-cancel {
+    background-color: var(--color-primary-light);
+    color: var(--color-base-9);
+}
+
+.c-edited-card-cancel:hover {
+    color: var(--color-base-9);
+}
+
+.c-edited-card-cancel,
+.c-edited-card-save {
+    font-weight: 600;
+    font-size: var(--font-size-s);
+}

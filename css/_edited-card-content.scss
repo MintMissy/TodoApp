@@ -1,0 +1,78 @@
+.todo-list-label {
+    margin-top: var(--space-xs);
+}
+
+@import '_edited-card-chose-icon.scss';
+@import '_edited-card-labels.scss';
+
+.card-description-label {
+    margin-top: var(--space-xs);
+}
+
+.c_edited-card__input-description {
+    background-color: transparent;
+}
+
+
+.c-task,
+.c-task-add {
+    display: flex;
+    align-items: center;
+    border-radius: var(--space-xxs);
+    height: 2.5em;
+    color: var(--color-base-7);
+}
+
+.c-task {
+    padding: var(--space-xs) var(--space-s);
+}
+
+.c-task-add {
+    padding: var(--space-xs) var(--space-xs);
+}
+
+.c-task-add__icon {
+    color: var(--color-base-5);
+    margin-left: -0.05em;
+    margin-right: 0.6em;
+}
+
+.c-task:hover,
+.c-task-add:hover {
+    background-color: var(--color-base-1);
+}
+
+.c-task__checkbox {
+    margin-right: var(--space-m);
+}
+
+.c-task__description {
+    max-width: 100%;
+    width: 90%;
+    font-size: var(--font-size-s);
+    background-color: transparent;
+}
+
+.c-task__description:focus,
+.c-task__description:active {
+    border-bottom: 1px solid var(--color-base-7);
+}
+
+.c-task__actions {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 10%;
+    gap: var(--space-xxs);
+}
+
+.c-task .c-task__actions .action-icon {
+    display: none;
+}
+
+.c-task:hover .c-task__actions .action-icon {
+    display: block;
+}
+
+.c-task__actions:first-child {
+    margin-left: auto;
+}

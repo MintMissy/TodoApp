@@ -1,0 +1,21 @@
+.c-edited-card__c-labels {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.editable-card-label {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: .25em;
+    height: 1.5em;
+}
+
+.editable-card-label {
+    width: 4em;
+    cursor: pointer;
+}
+
+.editable-card-label--red {
+    background-color: #da3b3b;
+}
