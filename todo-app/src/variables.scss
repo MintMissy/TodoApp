@@ -1,0 +1,42 @@
+:root {
+  // Fonts
+  --font-unit: 1rem;
+  --font-family-primary: 'Segoe UI', sans-serif;
+  --font-size-xl: calc(2.5 * var(--font-unit));
+  --font-size-l: calc(2 * var(--font-unit));
+  --font-size-m: calc(1.4 * var(--font-unit));
+  --font-size-s: calc(1 * var(--font-unit));
+  --font-size-xs: calc(0.8 * var(--font-unit));
+
+  // Colors
+  --color-primary-dark: #0f3057;
+  --color-primary-base: #00587a;
+  --color-primary-light: #008891;
+  --color-secondary-dark: #f09232;
+  --color-secondary-base: #f0c532;
+  --color-alert: #f7b85b;
+  --color-error: #f05c5c;
+  --color-base-1: #FFFFFF;
+  --color-base-2: #f3f7f7;
+  --color-base-3: #C0CFD1;
+  --color-base-4: #A8B7BA;
+  --color-base-5: #607076;
+  --color-base-6: #48585F;
+  --color-base-7: #304048;
+  --color-base-8: #182931;
+  --color-base-9: #00111A;
+
+  // Spacers
+  --space-unit: 0.8em;
+  --space-xxl: calc(3 * var(--space-unit));
+  --space-xl: calc(2 * var(--space-unit));
+  --space-l: calc(1.25 * var(--space-unit));
+  --space-m: calc(1 * var(--space-unit));
+  --space-s: calc(0.75 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-xxs: calc(0.25 * var(--space-unit));
+
+  @media screen and (min-width: 769px) {
+    --space-unit: 1em;
+  }
+}

@@ -1,9 +1,9 @@
-import MainNavigation from './MainNavigation';
+import PageNavigation from './PageNavigation';
 
 function Layout(props) {
   return (
     <div>
-      <MainNavigation />
+      <PageNavigation />
       <main>{props.children}</main>
     </div>
   );

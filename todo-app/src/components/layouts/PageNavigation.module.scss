@@ -1,0 +1,37 @@
+@use '../../variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-s) var(--space-xl);
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  font-size: var(--font-size-l);
+  color: var(--color-secondary-dark);
+  font-size: var(--font-size-xl);
+}
+
+.navbar__logo__image {
+  max-height: 35px;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xl);
+}
+
+.navbar__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-base-9);
+}
+
+.navbar__link:visited {
+  color: var(--color-base-9);
+}
