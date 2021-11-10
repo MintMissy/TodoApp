@@ -1,6 +1,6 @@
 import PageNavigation from './PageNavigation';
 
-function Layout(props) {
+export default function Layout(props) {
   return (
     <div>
       <PageNavigation />
@@ -8,5 +8,3 @@ function Layout(props) {
     </div>
   );
 }
-
-export default Layout;

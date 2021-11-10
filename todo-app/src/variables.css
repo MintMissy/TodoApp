@@ -1,5 +1,5 @@
 :root {
-  // Fonts
+  /* Fonts */
   --font-unit: 1rem;
   --font-family-primary: 'Segoe UI', sans-serif;
   --font-size-xl: calc(2.5 * var(--font-unit));
@@ -8,7 +8,7 @@
   --font-size-s: calc(1 * var(--font-unit));
   --font-size-xs: calc(0.8 * var(--font-unit));
 
-  // Colors
+  /* Colors */
   --color-primary-dark: #0f3057;
   --color-primary-base: #00587a;
   --color-primary-light: #008891;
@@ -26,7 +26,7 @@
   --color-base-8: #182931;
   --color-base-9: #00111A;
 
-  // Spacers
+  /* Spacers */
   --space-unit: 0.8em;
   --space-xxl: calc(3 * var(--space-unit));
   --space-xl: calc(2 * var(--space-unit));
@@ -35,8 +35,10 @@
   --space-s: calc(0.75 * var(--space-unit));
   --space-xs: calc(0.5 * var(--space-unit));
   --space-xxs: calc(0.25 * var(--space-unit));
+}
 
-  @media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
+  :root {
     --space-unit: 1em;
   }
 }
