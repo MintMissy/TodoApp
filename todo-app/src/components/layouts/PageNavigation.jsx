@@ -5,15 +5,21 @@ import classes from './PageNavigation.module.scss';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
+// TODO Make this component out of pure components so they can be reused
 function PageNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navbarLinksClasses = classes['navbar__links'];
+  const [navLinksClasses, setNavLinksClasses] = useState(
+    `${classes['navbar__links']} ${classes['hidden']}`
+  );
+
   function menuToggleHandler() {
     setMenuOpen(!menuOpen);
 
-    // Showing
-
-    // Collapsing
+    if (menuOpen) {
+      setNavLinksClasses(`${classes['navbar__links']} ${classes['shown']}`);
+    } else {
+      setNavLinksClasses(`${classes['navbar__links']} ${classes['hidden']}`);
+    }
   }
 
   return (
@@ -26,18 +32,29 @@ function PageNavigation() {
         />
         Trecbo
       </Link>
-      <ul className={navbarLinksClasses}>
+      <ul className={navLinksClasses}>
         <li>
-          <Link to='/sign-up' className={classes['navbar__link']}>
+          <Link
+            to='/sign-up'
+            className={classes['navbar__link']}
+            onClick={menuToggleHandler}
+          >
             Sign up
           </Link>
         </li>
+        {/* TODO li elements to separate components -> NavLink, NavLinkBtn */}
         <li>
-          <Link to='/login' className={classes['navbar__link']}>
+          <Link
+            to='/login'
+            className={classes['navbar__link']}
+            onClick={menuToggleHandler}
+          >
             <button className={`btn ${classes['btn--login']}`}>Login</button>
           </Link>
         </li>
       </ul>
+      {/* TODO Page navigation to separate folder */}
+      {/* TODO Component toggleNavbar button */}
       {menuOpen ? (
         <MenuIcon
           className={classes['btn--toggle']}
