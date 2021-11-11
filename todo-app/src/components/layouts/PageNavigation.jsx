@@ -1,8 +1,21 @@
 import { Link } from 'react-router-dom';
 import LogoImgPath from '../../images/raster/TrecboLogo.png';
+import { useState } from 'react';
 import classes from './PageNavigation.module.scss';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 function PageNavigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navbarLinksClasses = classes['navbar__links'];
+  function menuToggleHandler() {
+    setMenuOpen(!menuOpen);
+
+    // Showing
+
+    // Collapsing
+  }
+
   return (
     <nav className={classes['navbar']}>
       <Link to='/' className={classes['navbar__logo']}>
@@ -13,7 +26,7 @@ function PageNavigation() {
         />
         Trecbo
       </Link>
-      <ul className={classes['navbar__links']}>
+      <ul className={navbarLinksClasses}>
         <li>
           <Link to='/sign-up' className={classes['navbar__link']}>
             Sign up
@@ -25,6 +38,17 @@ function PageNavigation() {
           </Link>
         </li>
       </ul>
+      {menuOpen ? (
+        <MenuIcon
+          className={classes['btn--toggle']}
+          onClick={menuToggleHandler}
+        />
+      ) : (
+        <CloseIcon
+          className={classes['btn--toggle']}
+          onClick={menuToggleHandler}
+        />
+      )}
     </nav>
   );
 }

@@ -1,31 +1,26 @@
-// Make navbar responsive in mobile view
+$navbar-horizontal-padding: var(--space-xl);
 
 .navbar {
+  z-index: 10;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-s) var(--space-xl);
   background-color: var(--color-base-1);
+  padding: var(--space-s) $navbar-horizontal-padding;
   box-shadow: 0px 8px 49px -2px #B8BBCD;
 }
 
 .navbar__logo {
   margin-top: -3px;
   text-decoration: none;
-  color: var(--color-secondary-dark);
   font-size: var(--font-size-xl);
+  color: var(--color-secondary-dark);
 }
 
 .navbar__logo-image {
-  max-height: 30px;
   margin-right: 8px;
-}
-
-.navbar__links {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: var(--space-xl);
+  max-height: 30px;
 }
 
 .navbar__link,
@@ -46,4 +41,42 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: var(--font-size-s);
+}
+
+.navbar__links {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(243, 243, 237);
+  width: 100%;
+  padding: var(--space-m) $navbar-horizontal-padding;
+  list-style: none;
+  gap: var(--space-xl);
+  animation: slide-in 0.75s ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .btn--toggle {
+    display: none !important;
+  }
+
+  .navbar__links {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
 }
