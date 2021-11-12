@@ -1,0 +1,9 @@
+.navbar__link,
+.navbar__link:visited {
+  color: var(--color-base-9);
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--font-size-s);
+}

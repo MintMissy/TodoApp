@@ -1,0 +1,13 @@
+.navbar__image-container {
+  margin-top: -3px;
+  text-decoration: none;
+  font-size: var(--font-size-xl);
+  color: var(--color-secondary-dark);
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+}
+
+.navbar__image {
+  margin-right: 8px;
+  max-height: 30px;
+}

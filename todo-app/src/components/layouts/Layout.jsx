@@ -1,4 +1,4 @@
-import PageNavigation from './PageNavigation';
+import PageNavigation from './navigation/PageNavigation';
 
 export default function Layout(props) {
   return (
